@@ -9,12 +9,10 @@ class massping:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def massping(self, ctx, member: discord.Member=None,):
+    async def massping(self, ctx, count: int, member: discord.Member=None,):
         author = ctx.message.author
-        await self.bot.say("Get Rekt {}".format(author))
-        print ("1 complete")
-        await self.bot.say("GET REKT {}".format(member))
+        await self.bot.say("GET REKT {}".format(mention.member))
 
 def setup(bot):
-    bot.add.cog(massping(bot))
+    bot.add_cog(massping(bot))
 
