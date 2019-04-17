@@ -17,7 +17,7 @@ class massping:
         server = ctx.message.server
         host = ctx.message.author
     while loop == True:
-        await.bot.say("GET REKT {}".format(user))
+        await self.bot.say("GET REKT {}".format(user))
 
 
 def setup(bot):
