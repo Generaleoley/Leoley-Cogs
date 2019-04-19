@@ -22,7 +22,7 @@ class royalerumble:
     async def register(self, ctx, series: int):
         """Registers the user for Royale Rumble, for the series number please contact a staff member."""
         if series != None:
-            if series != 2:
+            if series == 2:
                 await self.bot.say("User registered")
             else:
                 await self.bot.say("Invalid Series Number, please contact a staff member")
