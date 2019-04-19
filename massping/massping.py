@@ -3,7 +3,6 @@ import asyncio
 import discord
 from discord.ext import commands
 
-loop = True
 
 class massping:
 
@@ -11,15 +10,19 @@ class massping:
     def __init__(self,bot):
         self.bot = bot
 
-    @commands.command(pass_context=True)
-    async def massping(self, ctx, count: int, member: discord.Member=None,):
-        "Pings a user the "Count" amount of times.
+    @commands.command(pass_context=True, aliases = ["mping"])
+    async def massping(self, ctx, message: str, count: int, member: discord.Member=None,):
         author = ctx.message.author
-
-        while loop == True:
-            await self.bot.say("GET REKT {}".format(member.mention))
+        mloop = 0
+        int(count)
+        int(mloop)
+        while mloop < count:
+            await self.bot.say("{} {}".format(message, member.mention))
+            int (mloop)
+            mloop = mloop + 1
         else:
-            print ("exit")
+            await self.bot.say("Completed")
+            
 
 def setup(bot):
     bot.add_cog(massping(bot))
