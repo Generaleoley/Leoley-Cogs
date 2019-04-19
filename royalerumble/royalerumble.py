@@ -19,7 +19,7 @@ class royalerumble:
         self.clash = clashroyale.OfficialAPI(self.auth.getOfficialToken(), is_async=True)
 
     @commands.command(pass_context=True, no_pm=True, aliases=["reg"])
-    def register(self, ctx, series: int):
+    async def register(self, ctx, series: int):
         """Registers the user for Royale Rumble, for the series number please contact a staff member."""
         if series != None:
             if series != 2:
