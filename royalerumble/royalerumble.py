@@ -134,8 +134,8 @@ class royalerumble:
                                 'Personal Best' : maxtrophies,
                                 'Max Wins' : maxwins}
                     try:
-                        infodict = json.dumps(playerinfo)
-                        playersfile = open("dict.json","w")
+                        infodict = json.dumps(playerinfo, sort_keys=True, indent=4)
+                        playersfile = open("players.json","w")
                         playersfile.write(infodict)
                         playersfile.close()
                     except:
