@@ -5,7 +5,7 @@ from discord.ext import commands
 
 
 class massping:
-"""Lose yourself some friends"""
+
 
     def __init__(self,bot):
         self.bot = bot
@@ -13,7 +13,6 @@ class massping:
     @commands.command(pass_context=True, aliases = ["welovegeneral", "generaleoleyop", "generaleoleyluv", "mightygeneral"])
     @commands.cooldown(rate=1, per=172800, type=commands.BucketType.user)
     async def hailgeneraleoley(self, ctx):
-        """Just do it!"""
         author = ctx.message.author
         await self.bot.say("As a reward for showing your respect towards the great mighty generaleoley, you have been awarded 100000 credits!")
         reward = int(100000)
@@ -39,5 +38,3 @@ class massping:
 
 def setup(bot):
     bot.add_cog(massping(bot))
-
-
