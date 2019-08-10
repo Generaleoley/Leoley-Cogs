@@ -9,14 +9,7 @@ class massping:
 
     def __init__(self,bot):
         self.bot = bot
-    
-    
-    #commands.command(pass_context=True)
-    #checks.admin_or_permissions(manage_roles=True)
-    #sync def 
-    
-    
-    
+
     @commands.command(pass_context=True, aliases = ["welovegeneral", "generaleoleyop", "generaleoleyluv", "mightygeneral"])
     @commands.cooldown(rate=1, per=172800, type=commands.BucketType.user)
     async def hailgeneraleoley(self, ctx):
